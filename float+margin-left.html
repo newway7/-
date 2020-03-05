@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.wrapper {
+    padding: 15px 20px;
+    border: 1px dashed #ff6c60;
+}
+.left {
+    width: 120px;
+    border: 5px solid #ddd;
+}
+.right {
+    margin-left: 20px;
+    border: 5px solid #ddd;
+}
+
+.wrapper-double-float {
+    overflow: auto;        
+    box-sizing: content-box;
+}
+
+.wrapper-float {
+    overflow: hidden;       
+}
+
+.wrapper-float .left {
+    float: left;
+}
+
+.wrapper-float .right {
+   margin-left: 150px; 
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="wrapper wrapper-float " id="wrapper">
+        <div class="left">
+          左边固定宽度，高度不固定 </br> </br></br></br>高度有可能会很小，也可能很大。
+        </div>
+        <div class="right">
+          这里的内容可能比左侧高，也可能比左侧低。宽度需要自适应。</br>
+          基本的样式是，两个div相距20px, 左侧div宽 120px
+          需要清除浮动
+          需要计算右侧盒子的margin-left;
+        </div>
+      </div>
+</body>
+</html>
